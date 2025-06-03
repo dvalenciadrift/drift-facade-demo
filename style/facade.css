@@ -1,0 +1,230 @@
+/** Drift facade **/
+
+.drift.drift-shown {
+  display: block
+}
+
+.drift-hidden {
+  display: none
+}
+
+.drift.drift-avatar-closed {
+  width: 0;
+  height: 0
+}
+
+.drift {
+  position: fixed;
+  right: 24px;
+  bottom: 37px;
+  z-index: 101;
+  width: 400px;
+  height: 110px;
+}
+
+.drift-widget {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  width: 220px;
+  height: 96px;
+  -webkit-animation: slideInRight 1s forwards;
+  animation: slideInRight 1s forwards;
+  -webkit-animation-timing-function: ease;
+  animation-timing-function: ease;
+  cursor: pointer;
+}
+
+.drift-widget::after {
+  position: absolute;
+  bottom: 55px;
+  left: 50%;
+  z-index: 3;
+  border: 10px solid;
+  border-color: transparent transparent transparent #fff;
+  content: " ";
+  pointer-events: none;
+}
+
+.drift-widget-message {
+  position: fixed;
+  right: 109px;
+  bottom: 37px;
+  z-index: 3;
+  margin: 0 0 0 12px;
+  height: auto;
+  color: #212021;
+  -webkit-box-shadow: 0 7px 6px 1px rgba(0, 0, 0, .16);
+  box-shadow: 0 7px 6px 1px rgba(0, 0, 0, .16);
+  border-radius: 4px;
+  background-color: #fff;
+  outline: 0;
+}
+
+.drift-widget .drift-close-button {
+  position: absolute;
+  top: -5px;
+  left: -24px;
+  z-index: 1;
+  margin: 2px 0 0;
+  padding: 4px;
+  width: 20px;
+  height: 20px;
+  line-height: 12px;
+  opacity: 1;
+  -webkit-box-shadow: 0 2px 10px 0 rgba(53, 63, 69, .15), 0 1px 2px 0 rgba(0, 0, 0, .2);
+  box-shadow: 0 2px 10px 0 rgba(53, 63, 69, .15), 0 1px 2px 0 rgba(0, 0, 0, .2);
+  border: 1px solid #fff;
+  border-radius: 50%;
+  background: #687882;
+  cursor: pointer;
+}
+
+.drift-widget .drift-close-button:hover {
+  background: #414141;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+}
+
+.drift-widget-message p {
+  margin: 0;
+  padding: 10px;
+  max-width: 220px;
+  min-width: 200px;
+  max-height: 140px;
+  color: #212021;
+  font-size: 14px;
+  text-align: left;
+  line-height: 20px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  border: 2px solid transparent;
+  border-radius: 4px;
+  background-color: #fff;
+}
+
+.drift-facade {
+  position: fixed;
+  right: 37px;
+  bottom: 37px;
+  z-index: 2;
+  width: 55px;
+  height: 55px;
+  -webkit-box-shadow: 0 0 8px 4px rgba(0, 0, 0, .16);
+  box-shadow: 0 0 8px 4px rgba(0, 0, 0, .16);
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: #efb1e6;
+  display: flex;
+}
+
+
+.drift .drift-loader {
+  top: -19%;
+  right: 17%;
+  display: block;
+  -webkit-transform: scale(.65);
+  transform: scale(.65);
+}
+
+.drift-loader.hide-loader {
+  display: none;
+}
+
+.drift-facade-img {
+  border-radius: 50%;
+}
+
+.drift-icon-unread {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  width: 18px;
+  height: 18px;
+  color: #fff;
+  font-size: 12px;
+  text-align: center;
+  line-height: 21px;
+  border-radius: 50%;
+  background-color: #d0241b;
+}
+
+.drift .drift-dark-bg {
+  background-color: #efb1e6;
+}
+
+@-webkit-keyframes slideInRight {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(150%);
+    transform: translateX(150%)
+  }
+
+  70% {
+    opacity: 0
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    transform: translateX(0)
+  }
+}
+
+
+@media all and (-ms-high-contrast:none) {
+  .drift-widget-message {
+    width: auto
+  }
+}
+
+@keyframes slideInRight {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(150%);
+    transform: translateX(150%)
+  }
+
+  70% {
+    opacity: 0
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    transform: translateX(0)
+  }
+}
+
+/* HTML: <div class="loader"></div> */
+.drift-loader {
+  width: 60px;
+  aspect-ratio: 1;
+  background: radial-gradient(circle closest-side, #fff 90%, #0000) 0/calc(100%/3) 100% space;
+  clip-path: inset(0 100% 0 0);
+  animation: d1 1.9s steps(4) infinite;
+}
+
+@keyframes d1 {
+  to {
+    clip-path: inset(0 -33% 0 0)
+  }
+}
+
+.drift-checker-img {
+  max-width: 100px;
+}
+
+.drift-checker.drift-checker-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 50px;
+  font-size: large;
+}

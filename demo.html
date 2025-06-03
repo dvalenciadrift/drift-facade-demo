@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- USES dpease@drift.com's demo org: 5000883 -->
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="style/style.css" rel="stylesheet" />
+  <link href="style/facade.css" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Start cookieyes banner -->
+  <script id="cookieyes" type="text/javascript"
+    src="https://cdn-cookieyes.com/client_data/db5f2e4de2601207accd0361/script.js"></script>
+  <!-- End cookieyes banner -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
+  <script src="drift.js"></script>
+  <title>Drift with a Cookie Manager Demo</title>
+  <link rel="icon" type="image/x-icon" href="../../favicon_io/favicon.ico">
+</head>
+
+<body>
+  <div role="document">
+    <div class="content">
+      <main class="main">
+        <div class="v2-components">
+          <div class="m3--hero-l3 ">
+            <div class="m3--hero-l3-vnoimage">
+              <div class="m3--hero-l3-vnoimage-bg bg-magenta viewport-animate animate__animated animate__fadeInRight"
+                data-animation="animate__fadeInRight"></div>
+              <div class="container">
+                <div class="row">
+                  <div
+                    class="m3--hero-l3-vnoimage-content col-12 col-lg-10 viewport-animate animate__animated animate__fadeInLeft"
+                    data-animation="animate__fadeInLeft">
+                    <h1 class="small">Drift Façade and cookie consent management</h1>
+                    <div class="m3--hero-l3-vnoimage-content-body col-12 col-lg-8">
+                      <div class="text-large">
+                        <p>Put Drift on your site without putting Drift on your site.</p>
+                      </div>
+                    </div>
+                    <div
+                      class="drift-checker drift-checker-container viewport-animate animate__animated animate__fadeInLeft"
+                      data-animation="animate__fadeInLeft">
+                      <h3 class="drift-checker drift-checker-header">Is Drift installed?</h3>
+                      <img id="yes-icon" src="img/yes.svg" alt="yes icon" class="drift-checker-img drift-hidden">
+                      <img id="no-icon" src="img/no.svg" alt="no icon" class="drift-checker-img ">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+            </div>
+          </div>
+      </main>
+    </div>
+  </div>
+
+
+  <!-- Begin Drift Facade -->
+  <div class="drift" id="drift-facade-container">
+    <div class="drift-widget">
+      <div class="drift-widget-message">
+        <div class="drift-close-button" id="drift-close-button">
+          <img class="" src="img/drift-close-button.svg" alt="drift close">
+        </div>
+
+        <!-- replace hook message with your own -->
+        <p class="drift-widget-text" id="drift-message">
+          Hey 👋! Any questions? I can have a teammate jump in on chat right now! </p>
+      </div>
+    </div>
+
+    <div class="drift-facade">
+      <div class="hide-loader drift-loader"></div>
+      <!-- Replace bot image with your own -->
+      <img class="drift-facade-img" src="img/drift_bot.png" alt="drift bot">
+      <img class="drift-facade-img drift-dark-bg drift-hidden" src="img/drift-icon.svg" alt="drift bot">
+      <div class="drift-icon-unread">1</div>
+    </div>
+  </div>
+</body>
+
+<script src="facade.js" type="text/javascript"></script>
+
+<!-- End Drift Facade -->
+
+</html>
